@@ -1,6 +1,7 @@
 <?php
 define("AppID", "");
 define("AppSecret", "");
+define("TOKEN", "");
 define("MySQL_Host", "localhost");
 define("MySQL_User", "");
 define("MySQL_Password", "");
