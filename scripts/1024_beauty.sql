@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `MediaID`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `MediaID` (
-  `id_name` varchar(10) NOT NULL,
+  `id_name` varchar(30) NOT NULL,
   `media_id` varchar(200) NOT NULL,
   PRIMARY KEY (`id_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -38,4 +38,4 @@ CREATE TABLE `MediaID` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-01-28 16:22:10
+-- Dump completed on 2016-02-02 11:03:11

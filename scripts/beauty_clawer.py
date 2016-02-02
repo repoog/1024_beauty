@@ -2,7 +2,6 @@
 import requests
 import re
 import os
-import os.path
 import sys
 
 class HuabanCrawler():
@@ -54,6 +53,7 @@ class HuabanCrawler():
         return self.images
 
     def down_images(self):
+        os.system("/bin/bash file_clean.sh -C")
         print "{} image will be download".format(len(self.images))
         for key, image in enumerate(self.images):
             print 'download {0} ...'.format(key)
@@ -61,11 +61,12 @@ class HuabanCrawler():
                 req = requests.get(image["url"])
             except :
                 print 'error'
-            imageName = os.path.join(self.imgPath, str(key) + "." + image["type"])
+            imageName = os.path.join(self.imgPath, image["id"] + "." + image["type"])
             self.__save_image(imageName, req.content)
 
     def in_media_db(self):
         """ call php interface to upload images """
+        os.system("/bin/bash file_clean.sh -H")
         requests.get(url = self.inter)
 
 if __name__ == '__main__':
