@@ -66,7 +66,7 @@ class HuabanCrawler():
 
     def in_media_db(self):
         """ call php interface to upload images """
-        os.system("/bin/bash file_clean.sh -H")
+        os.system("/bin/bash file_clean.sh -D")
         requests.get(url = self.inter)
 
 if __name__ == '__main__':
